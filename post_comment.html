@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Comment Handle</title>
+</head>
+
+<body>
+    <section id="sec">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id at error praesentium impedit excepturi! Quaerat
+            eaque in adipisci ea magni, pariatur laborum porro omnis necessitatibus sit eum hic ipsa error quas iste
+            accusantium numquam cum aperiam. Officia aperiam eius atque nemo, sit corrupti. Culpa ad magnam quidem,
+            corrupti id doloremque!</p>
+        <p>Eaque magnam dicta laudantium! Consequuntur assumenda amet nobis quia delectus. Vitae tenetur molestias
+            dignissimos, adipisci ad libero sunt ipsum corrupti aliquid laudantium porro harum error architecto aliquam
+            magnam minima, inventore facere earum iste? Sequi, rem maxime blanditiis aliquid officiis itaque, expedita
+            magni voluptatum optio earum, hic aliquam libero voluptatibus iusto?</p>
+        <p>Ducimus repellendus omnis, nam ipsa accusantium blanditiis voluptatem voluptates possimus voluptate molestias
+            cumque velit sit ex excepturi aliquam, minima tempora expedita tempore reprehenderit vel dicta voluptas!
+            Amet atque magni eligendi consectetur? Nisi, quibusdam ullam incidunt ea architecto, iusto a ipsam
+            blanditiis assumenda, hic molestias eligendi minima voluptates. Modi, ad deserunt.</p>
+    </section>
+    <textarea name="" id="comment" cols="30" rows="10"></textarea> <br>
+    <button id="post_comment">Post</button>
+
+
+    <script>
+        //add button handler
+        document.getElementById('post_comment').addEventListener('click', function () {
+
+            //let user comment
+            const comment_content = document.getElementById('comment');
+            // const userComment = comment_content.value;
+
+            //create paragraph
+            const new_comment = document.createElement('p');
+            new_comment.innerText = comment_content.value;
+            comment_content.value = '';
+
+            //append child
+            const comment_container = document.getElementById('sec');
+            comment_container.appendChild(new_comment);
+
+        })
+    </script>
+</body>
+
+</html>

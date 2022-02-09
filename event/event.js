@@ -23,3 +23,15 @@ goldenButton.addEventListener('click', rodButton)
 function rodButton() {
     document.body.style.backgroundColor = 'goldenrod';
 }
+
+//addEventListener
+const pinkButton = document.getElementById('pinkBtn');
+pinkButton.addEventListener('click', function pink() {
+    document.body.style.backgroundColor = 'hotpink';
+})
+
+///direct Shortcut
+
+const btnLightBlue = document.getElementById('lightBlue').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'lightblue';
+})

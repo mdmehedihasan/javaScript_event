@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+    <p id="clickingMethod"></p>
+    <input id="input_for_field" type="text">
+    <button id="button_for_field">Update</button>
+    <button onclick="second()">click me: second style</button>
+    <button id="common">click me: common style</button>
+
+
+
+
+    <script src=""></script>
+    <script>
+        document.getElementById('common').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'red';
+        })
+        function second() {
+            document.body.style.backgroundColor = 'blue';
+            const p = document.getElementById('clickingMethod');
+            p.innerText = 'set by using function';
+        }
+        //direct method
+        document.getElementById('button_for_field').addEventListener('click', function () {
+            const input_field = document.getElementById('input_for_field');
+            const p = document.getElementById('clickingMethod');
+            p.innerText = input_field.value;
+            input_field.value = '';
+        })
+
+    </script>
+</body>
+
+</html>
