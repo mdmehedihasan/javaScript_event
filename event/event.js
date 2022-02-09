@@ -16,3 +16,10 @@ const blue = document.getElementById('blueBtn');
 blue.onclick = function blueButton() {
     document.body.style.backgroundColor = 'blue';
 }
+
+//handle by addeventlistner
+const goldenButton = document.getElementById('rodBtn');
+goldenButton.addEventListener('click', rodButton)
+function rodButton() {
+    document.body.style.backgroundColor = 'goldenrod';
+}
